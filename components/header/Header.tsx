@@ -2,9 +2,21 @@ import React, { useState } from 'react';
 
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { ImCross } from 'react-icons/im';
 
 const Header = () => {
   const [sideMeniuOpen, setSideMeniuOpen] = useState(false);
+
+  const exitSideNavigation = () => {
+    if (sideMeniuOpen === true) {
+      setSideMeniuOpen(false);
+    }
+
+    if (sideMeniuOpen === false) {
+      setSideMeniuOpen(true);
+    }
+  };
+  console.log(sideMeniuOpen);
 
   return (
     <div className="header">
@@ -14,7 +26,21 @@ const Header = () => {
         alt="railz"
       />
 
-      <div className="navigation-container open">
+      <div className={`navigation-container ${sideMeniuOpen ? 'open' : ''} `}>
+        <div className="navigation-header">
+          <div className="phone-header-logo">
+            <img
+              src="https://pbs.twimg.com/profile_images/1325486360682180614/p8pwyjLY_400x400.png"
+              alt="reilz"
+            />
+          </div>
+          <div>
+            <ImCross
+              className="header-exit-button"
+              onClick={exitSideNavigation}
+            />
+          </div>
+        </div>
         <nav className="navigation">
           <ul className="navigation-list">
             <li>
@@ -44,7 +70,7 @@ const Header = () => {
           <button className="get-started-btn">Get started</button>
         </div>
       </div>
-      <GiHamburgerMenu className="meniu-icon" />
+      <GiHamburgerMenu className="meniu-icon" onClick={exitSideNavigation} />
     </div>
   );
 };
