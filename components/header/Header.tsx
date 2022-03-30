@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { ImCross } from 'react-icons/im';
 
-const Header = () => {
-  const [sideMeniuOpen, setSideMeniuOpen] = useState(false);
+interface ComponentsProps {
+  sideMeniuOpen: boolean;
+  setSideMeniuOpen: any;
+}
 
+const Header: React.FC<ComponentsProps> = ({
+  sideMeniuOpen,
+  setSideMeniuOpen,
+}) => {
   const exitSideNavigation = () => {
     if (sideMeniuOpen === true) {
       setSideMeniuOpen(false);
