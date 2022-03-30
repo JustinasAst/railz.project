@@ -1,5 +1,5 @@
 .header {
-  padding: 26px 30px;
+  padding: 26px 50px;
   display: flex;
   text-align: center;
   align-items: center;
@@ -24,6 +24,8 @@
     padding: 0 20px;
     display: flex;
     align-items: center;
+    font-weight: 400;
+    font-size: 18px;
   }
 }
 
@@ -57,6 +59,7 @@
 
 .navigation-arrow-icon {
   margin-left: 5px;
+  font-size: 20px;
 }
 
 .meniu-icon {
@@ -89,6 +92,7 @@
     max-width: 500px;
     padding: 30px 30px;
     right: 1;
+    overflow: auto;
     transition-duration: 0.25s;
     .navigation-list {
       flex-direction: column;
@@ -114,6 +118,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin-right: 10px;
 
     img {
       width: 50px;
@@ -125,7 +130,6 @@
 
     li {
       height: 40px;
-      width: 450px;
       display: flex;
       align-items: center;
       padding: 30px 0px;
@@ -150,5 +154,25 @@
 
   .navigation-arrow-icon {
     font-size: 28px;
+  }
+
+  .navigation {
+    width: 100%;
+  }
+
+  @media (max-width: 475px) {
+    .header-btn-container {
+      button {
+        width: 150px;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    .header-btn-container {
+      button {
+        width: 120px;
+      }
+    }
   }
 }
