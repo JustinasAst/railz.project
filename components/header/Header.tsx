@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { ImCross } from 'react-icons/im';
+import { GrClose } from 'react-icons/gr';
 
 interface ComponentsProps {
   sideMeniuOpen: boolean;
@@ -40,7 +40,7 @@ const Header: React.FC<ComponentsProps> = ({
             />
           </div>
           <div>
-            <ImCross
+            <GrClose
               className="header-exit-button"
               onClick={exitSideNavigation}
             />
@@ -60,10 +60,7 @@ const Header: React.FC<ComponentsProps> = ({
               Developers
               <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
             </li>
-            <li>
-              Pricing
-              <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
-            </li>
+            <li>Pricing</li>
             <li>
               Company
               <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
