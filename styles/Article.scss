@@ -13,6 +13,7 @@
     font-size: 55px;
     font-weight: 600;
   }
+
   p {
     font-size: 20px;
     line-height: 30px;
@@ -40,6 +41,7 @@
   font-size: 35px;
   max-width: 680px;
   margin: 60px auto 0px;
+  padding: 0 20px;
 }
 
 .article-about-benefits-container {
@@ -51,6 +53,7 @@
 
 .article-about-box {
   flex: 1;
+
   h3 {
     font-size: 24px;
     font-weight: 600;
@@ -80,9 +83,26 @@
 
   .get-full-access-section {
     flex: 1;
+
     h1 {
       text-align: center;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .article-about-title {
+    font-size: 30px;
+  }
+
+  .article-about-benefits-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 475px) {
+  .article-about-title {
+    font-size: 25px;
   }
 }
 
