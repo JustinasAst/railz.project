@@ -18,7 +18,7 @@
 
 .get-full-access-section h1 {
   font-size: 55px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .get-full-access-section p {
@@ -44,6 +44,40 @@
           flex: 2;
 }
 
+.article-about-title {
+  text-align: center;
+  font-size: 35px;
+  max-width: 680px;
+  margin: 60px auto 0px;
+}
+
+.article-about-benefits-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  padding: 0 30px;
+  margin-top: 80px;
+}
+
+.article-about-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.article-about-box h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.article-about-box p {
+  line-height: 30px;
+  color: #4e4e4e;
+  margin-top: 10px;
+}
+
 @media (max-width: 940px) {
   .article-section {
     -webkit-box-orient: vertical;
@@ -57,6 +91,10 @@
             flex: 1;
     text-align: center;
   }
+  .logo-component img {
+    max-width: 100%;
+    height: auto;
+  }
   .get-full-access-section {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -64,6 +102,12 @@
   }
   .get-full-access-section h1 {
     text-align: center;
+  }
+}
+
+@media (max-width: 410px) {
+  .get-full-access-section h1 {
+    font-size: 35px;
   }
 }
 /*# sourceMappingURL=Article.css.map */
