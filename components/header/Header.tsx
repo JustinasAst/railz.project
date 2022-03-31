@@ -2,6 +2,7 @@ import React from 'react';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
+import Product from '../product/Product';
 
 interface ComponentsProps {
   sideMeniuOpen: boolean;
@@ -51,6 +52,9 @@ const Header: React.FC<ComponentsProps> = ({
             <li>
               Product
               <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+              <div className="hide-navigation-data">
+                <Product />
+              </div>
             </li>
             <li>
               Use cases

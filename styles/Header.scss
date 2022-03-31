@@ -1,5 +1,5 @@
 .header {
-  padding: 26px 50px;
+  padding: 0px 50px;
   display: flex;
   text-align: center;
   align-items: center;
@@ -19,9 +19,11 @@
   display: flex;
   text-decoration: none;
   list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
 
   li {
-    padding: 0 20px;
+    padding: 40px 20px;
     display: flex;
     align-items: center;
     font-weight: 400;
@@ -33,7 +35,16 @@
   li:hover {
     .navigation-arrow-icon {
       transform: rotateZ(180deg);
-      transition-duration: 0.25s;
+      transition-duration: 550ms;
+    }
+
+    .hide-navigation-data {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 1;
+      margin-top: 1450px;
+      transition-duration: 500ms;
     }
   }
 }
@@ -81,6 +92,13 @@
   display: none;
 }
 
+.hide-navigation-data {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -100%;
+}
+
 @media (max-width: 1260px) {
   .navigation-container {
     top: 0;
@@ -101,7 +119,7 @@
 
   .navigation-container.open {
     right: -100%;
-    transition-duration: 0.5s;
+    transition-duration: 500ms;
   }
 
   .header-exit-button {
