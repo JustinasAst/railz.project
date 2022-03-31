@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from '../components/header/Header';
+import Article from '../components/article/Article';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -23,7 +24,9 @@ const Home: NextPage = () => {
         sideMeniuOpen={sideMeniuOpen}
         setSideMeniuOpen={setSideMeniuOpen}
       />
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+        <Article />
+      </main>
 
       <footer className={styles.footer}></footer>
     </div>
