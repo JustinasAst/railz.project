@@ -49,10 +49,16 @@ const Header: React.FC<ComponentsProps> = ({
         </div>
         <nav className="navigation">
           <ul className="navigation-list">
-            <li>
-              Product
-              <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+            <li className="navigation-list-element">
+              <div className="title-and-icon">
+                Product
+                <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+              </div>
               <div className="hide-navigation-data">
+                <Product />
+              </div>
+
+              <div className="hidemobile">
                 <Product />
               </div>
             </li>

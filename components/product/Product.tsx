@@ -19,7 +19,7 @@ export const Product = () => {
             <FiArrowRight className="arrow-roght" />
           </button>
         </div>
-        <div>
+        <div className="navigattion-links-section">
           <div className="navigation-data-box">
             <img
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2Fe961c92e9b%2Fapi-64x64.svg&w=1920&q=80"
@@ -39,7 +39,7 @@ export const Product = () => {
               alt="railz connect"
             />
             <div className="navigation-data-box-content">
-              <h3>Railz API</h3>
+              <h3>Railz Connect</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 consequatur obcaecati nesciunt!
@@ -52,22 +52,21 @@ export const Product = () => {
               alt="railz sites"
             />
             <div className="navigation-data-box-content">
-              <h3>Railz API</h3>
+              <h3>Railz Sites</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 consequatur obcaecati nesciunt!
               </p>
             </div>
           </div>
-        </div>
-        <div>
+
           <div className="navigation-data-box">
             <img
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2Fe961c92e9b%2Fapi-64x64.svg&w=1920&q=80"
               alt="railz API"
             />
             <div className="navigation-data-box-content">
-              <h3>Railz API</h3>
+              <h3>Railz Analytics</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 consequatur obcaecati nesciunt!
@@ -80,7 +79,7 @@ export const Product = () => {
               alt="railz connect"
             />
             <div className="navigation-data-box-content">
-              <h3>Railz API</h3>
+              <h3>Railz Insights</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 consequatur obcaecati nesciunt!
@@ -93,10 +92,10 @@ export const Product = () => {
               alt="railz sites"
             />
             <div className="navigation-data-box-content">
-              <h3>Railz API</h3>
+              <h3>Railz Dashboard</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                consequatur obcaecati nesciunt!
+                ksaos saklsdkl klasklksa
               </p>
             </div>
           </div>

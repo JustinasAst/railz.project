@@ -43,11 +43,16 @@
   font-size: 18px;
 }
 
+.navigation-list li .navigation-arrow-icon {
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+
 .navigation-list li:hover .navigation-arrow-icon {
-  -webkit-transform: rotateZ(180deg);
-          transform: rotateZ(180deg);
-  -webkit-transition-duration: 550ms;
-          transition-duration: 550ms;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .navigation-list li:hover .hide-navigation-data {
@@ -116,7 +121,17 @@
   top: -100%;
 }
 
+.hidemobile {
+  display: none;
+}
+
 @media (max-width: 1260px) {
+  .header {
+    padding: 27px 50px;
+  }
+  .hide-navigation-data {
+    display: none;
+  }
   .navigation-container {
     top: 0;
     right: 0;
@@ -131,14 +146,37 @@
     padding: 30px 30px;
     right: 1;
     overflow: auto;
-    -webkit-transition-duration: 0.25s;
-            transition-duration: 0.25s;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
   }
   .navigation-container .navigation-list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .title-and-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .navigation-list-element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navigation-list li:hover .hidemobile {
+    -webkit-transition-duration: 300ms;
+            transition-duration: 300ms;
+    display: block;
   }
   .navigation-container.open {
     right: -100%;
@@ -172,7 +210,7 @@
     padding-left: 0;
   }
   .navigation-list li {
-    height: 40px;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
