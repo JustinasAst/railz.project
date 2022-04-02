@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
 
 export const Product = () => {
@@ -25,13 +26,15 @@ export const Product = () => {
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2Fe961c92e9b%2Fapi-64x64.svg&w=1920&q=80"
               alt="railz API"
             />
-            <div className="navigation-data-box-content">
-              <h3>Railz API</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                consequatur obcaecati nesciunt!hkjdsgasgagh m
-              </p>
-            </div>
+            <Link href="RailzApi">
+              <div className="navigation-data-box-content">
+                <h3>Railz API</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  consequatur obcaecati nesciunt!hkjdsgasgagh m
+                </p>
+              </div>
+            </Link>
           </div>
           <div className="navigation-data-box">
             <img

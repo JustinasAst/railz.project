@@ -8,6 +8,10 @@
   padding: 20px 20px;
 }
 
+.navigation-data-box-content {
+  cursor: pointer;
+}
+
 .get-full-access-section {
   -webkit-box-flex: 1;
       -ms-flex: 1;

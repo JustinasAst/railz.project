@@ -1,18 +1,16 @@
 import type { NextPage } from 'next';
-import React, { useState } from 'react';
 import Head from 'next/head';
-import Header from '../components/header/Header';
 import Article from '../components/article/Article';
 import styles from '../styles/Home.module.css';
+import { useContext } from 'react';
+import { AuthContext } from '../context';
 
 const Home: NextPage = () => {
-  const [sideMeniuOpen, setSideMeniuOpen] = useState(false);
+  const { turnOffMenu } = useContext(AuthContext);
 
   return (
     <div
-      className={[styles.container, !sideMeniuOpen ? styles.shadow : ' '].join(
-        ' '
-      )}
+      className={[styles.container, !turnOffMenu ? styles.shadow : ' '].join()}
     >
       <Head>
         <title>Create Next App</title>
@@ -20,10 +18,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header
-        sideMeniuOpen={sideMeniuOpen}
-        setSideMeniuOpen={setSideMeniuOpen}
-      />
       <main className={styles.main}>
         <Article />
       </main>

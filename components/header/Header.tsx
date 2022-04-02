@@ -1,38 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
 import Product from '../product/Product';
+import { useContext } from 'react';
+import { AuthContext } from '../../context';
 
-interface ComponentsProps {
-  sideMeniuOpen: boolean;
-  setSideMeniuOpen: any;
-}
+const Header = () => {
+  const { turnOffMenu, setTurnOffMenu } = useContext(AuthContext);
 
-const Header: React.FC<ComponentsProps> = ({
-  sideMeniuOpen,
-  setSideMeniuOpen,
-}) => {
   const exitSideNavigation = () => {
-    if (sideMeniuOpen === true) {
-      setSideMeniuOpen(false);
+    if (turnOffMenu === true) {
+      setTurnOffMenu(false);
     }
 
-    if (sideMeniuOpen === false) {
-      setSideMeniuOpen(true);
+    if (turnOffMenu === false) {
+      setTurnOffMenu(true);
     }
   };
-  console.log(sideMeniuOpen);
 
   return (
     <div className="header">
-      <img
-        className="company-logo-header"
-        src="https://cdn-images-1.medium.com/max/558/1*18_NefqHGveV7zR2zKKYbQ@2x.png"
-        alt="railz"
-      />
+      <Link href="/">
+        <img
+          className="company-logo-header"
+          src="https://cdn-images-1.medium.com/max/558/1*18_NefqHGveV7zR2zKKYbQ@2x.png"
+          alt="railz"
+        />
+      </Link>
 
-      <div className={`navigation-container ${sideMeniuOpen ? 'open' : ''} `}>
+      <div className={`navigation-container ${turnOffMenu ? 'open' : ''} `}>
         <div className="navigation-header">
           <div className="phone-header-logo">
             <img
@@ -40,6 +38,7 @@ const Header: React.FC<ComponentsProps> = ({
               alt="reilz"
             />
           </div>
+
           <div>
             <GrClose
               className="header-exit-button"
@@ -47,6 +46,7 @@ const Header: React.FC<ComponentsProps> = ({
             />
           </div>
         </div>
+
         <nav className="navigation">
           <ul className="navigation-list">
             <li className="navigation-list-element">
@@ -54,6 +54,7 @@ const Header: React.FC<ComponentsProps> = ({
                 Product
                 <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
               </div>
+
               <div className="hide-navigation-data">
                 <Product />
               </div>
@@ -62,6 +63,7 @@ const Header: React.FC<ComponentsProps> = ({
                 <Product />
               </div>
             </li>
+
             <li>
               Use cases
               <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
@@ -77,6 +79,7 @@ const Header: React.FC<ComponentsProps> = ({
             </li>
           </ul>
         </nav>
+
         <div className="header-btn-container">
           <button className="login-btn">Log In</button>
           <button className="get-started-btn">Get started</button>
