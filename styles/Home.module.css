@@ -4,11 +4,13 @@
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: -2;
   background-color: rgb(253, 253, 253);
+  margin-top: 100px;
 }
 
 .container.shadow {
-  background-color: rgba(18, 138, 18, 0.199);
+  background-color: rgba(18, 138, 18, 0.055);
 }
 
 .main {

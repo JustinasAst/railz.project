@@ -30,7 +30,7 @@ const Header = () => {
         />
       </Link>
 
-      <div className={`navigation-container ${turnOffMenu ? 'open' : ''} `}>
+      <div className={`navigation-container ${turnOffMenu ? 'open' : ' '} `}>
         <div className="navigation-header">
           <div className="phone-header-logo">
             <img
