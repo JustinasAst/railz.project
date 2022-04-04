@@ -85,6 +85,7 @@ const Header = () => {
           <button className="get-started-btn">Get started</button>
         </div>
       </div>
+
       <GiHamburgerMenu className="meniu-icon" onClick={exitSideNavigation} />
     </div>
   );

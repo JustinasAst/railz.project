@@ -6,7 +6,8 @@ import { useContext } from 'react';
 import { AuthContext } from '../context';
 
 const Home: NextPage = () => {
-  const { turnOffMenu } = useContext(AuthContext);
+  const { turnOffMenu, setTurnOffMenu } = useContext(AuthContext);
+
   console.log(turnOffMenu, 'index');
 
   return (
