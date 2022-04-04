@@ -14,8 +14,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <AuthProvider>
         <Header />
-        <ExitBackgound />
-        <Component {...pageProps} />
+        <ExitBackgound>
+          <Component {...pageProps} />
+        </ExitBackgound>
       </AuthProvider>
     </>
   );
