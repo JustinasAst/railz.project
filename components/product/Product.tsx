@@ -26,7 +26,7 @@ export const Product = () => {
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2Fe961c92e9b%2Fapi-64x64.svg&w=1920&q=80"
               alt="railz API"
             />
-            <Link href="RailzApi">
+            <Link href="railz-api">
               <div className="navigation-data-box-content">
                 <h3>Railz API</h3>
                 <p>
@@ -41,26 +41,30 @@ export const Product = () => {
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F7edda16872%2Fconnect-02-64x64.svg&w=1920&q=80"
               alt="railz connect"
             />
-            <div className="navigation-data-box-content">
-              <h3>Railz Connect</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                consequatur obcaecati nesciunt!
-              </p>
-            </div>
+            <Link href="railz-connect">
+              <div className="navigation-data-box-content">
+                <h3>Railz Connect</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  consequatur obcaecati nesciunt!
+                </p>
+              </div>
+            </Link>
           </div>
           <div className="navigation-data-box">
             <img
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F87a0438dce%2Fsites-64x64.svg&w=1920&q=80"
               alt="railz sites"
             />
-            <div className="navigation-data-box-content">
-              <h3>Railz Sites</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                consequatur obcaecati nesciunt!
-              </p>
-            </div>
+            <Link href="railz-sites">
+              <div className="navigation-data-box-content">
+                <h3>Railz Sites</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  consequatur obcaecati nesciunt!
+                </p>
+              </div>
+            </Link>
           </div>
 
           <div className="navigation-data-box">
@@ -68,39 +72,45 @@ export const Product = () => {
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2Fe961c92e9b%2Fapi-64x64.svg&w=1920&q=80"
               alt="railz API"
             />
-            <div className="navigation-data-box-content">
-              <h3>Railz Analytics</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                consequatur obcaecati nesciunt!
-              </p>
-            </div>
+            <Link href="railz-analytics">
+              <div className="navigation-data-box-content">
+                <h3>Railz Analytics</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  consequatur obcaecati nesciunt!
+                </p>
+              </div>
+            </Link>
           </div>
           <div className="navigation-data-box">
             <img
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F7edda16872%2Fconnect-02-64x64.svg&w=1920&q=80"
               alt="railz connect"
             />
-            <div className="navigation-data-box-content">
-              <h3>Railz Insights</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                consequatur obcaecati nesciunt!
-              </p>
-            </div>
+            <Link href="railz-insights">
+              <div className="navigation-data-box-content">
+                <h3>Railz Insights</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  consequatur obcaecati nesciunt!
+                </p>
+              </div>
+            </Link>
           </div>
           <div className="navigation-data-box">
             <img
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F87a0438dce%2Fsites-64x64.svg&w=1920&q=80"
               alt="railz sites"
             />
-            <div className="navigation-data-box-content">
-              <h3>Railz Dashboard</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                ksaos saklsdkl klasklksa
-              </p>
-            </div>
+            <Link href="railz-dashboard">
+              <div className="navigation-data-box-content">
+                <h3>Railz Dashboard</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  ksaos saklsdkl klasklksa
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

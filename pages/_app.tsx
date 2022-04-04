@@ -2,7 +2,7 @@ import '../styles/globals.css';
 import '../styles/Article.css';
 import '../styles/Product.css';
 import '../styles/Header.css';
-import '../styles/RailzApi.css';
+import '../styles/RailzPage.css';
 import '../styles/ExitBackground.css';
 import '../styles/Footer.css';
 import type { AppProps } from 'next/app';
