@@ -46,10 +46,8 @@
 }
 
 .navigation-list li .navigation-arrow-icon {
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .hide-navigation-data {
@@ -67,7 +65,7 @@
 }
 
 .navigation-list li:hover .hide-navigation-data {
-  margin-top: 1230px;
+  margin-top: 1430px;
 }
 
 .login-btn {

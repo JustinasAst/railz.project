@@ -1,12 +1,13 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Footer from '../components/footer/Footer';
 import Article from '../components/article/Article';
 import styles from '../styles/Home.module.css';
 import { useContext } from 'react';
 import { AuthContext } from '../context';
 
 const Home: NextPage = () => {
-  const { turnOffMenu, setTurnOffMenu } = useContext(AuthContext);
+  const { turnOffMenu } = useContext(AuthContext);
 
   console.log(turnOffMenu, 'index');
 
@@ -26,7 +27,9 @@ const Home: NextPage = () => {
         <Article />
       </main>
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+        <Footer />
+      </footer>
     </div>
   );
 };
