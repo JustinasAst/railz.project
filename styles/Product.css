@@ -37,10 +37,6 @@
       flex-wrap: wrap;
 }
 
-.navigation-data-box:hover {
-  background-color: rgba(127, 255, 212, 0.267);
-}
-
 .navigation-data-box-content {
   text-align: left;
   padding-left: 20px;
@@ -87,6 +83,12 @@
 
 .railz-logo {
   cursor: pointer;
+}
+
+@media (min-width: 1260px) {
+  .navigation-data-box:hover {
+    background-color: rgba(127, 255, 212, 0.267);
+  }
 }
 
 @media (max-width: 1260px) {
