@@ -4,7 +4,7 @@ const RailzApi = () => {
   return (
     <div className="main-railz-container">
       <div className="page-container">
-        <h1>Railz API</h1>
+        <h1 className="railz">Railz API</h1>
       </div>
     </div>
   );
