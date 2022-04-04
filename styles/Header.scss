@@ -36,6 +36,14 @@
   }
 }
 
+.hide-navigation-data {
+  left: 0;
+  right: 0;
+  position: absolute;
+  transition: 500ms;
+  z-index: -1;
+}
+
 .navigation-list {
   li:hover {
     .navigation-arrow-icon {
@@ -43,13 +51,7 @@
     }
 
     .hide-navigation-data {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 1;
-      margin-top: 1450px;
-      transition-duration: 500ms;
-      z-index: -1;
+      margin-top: 1230px;
     }
   }
 }
@@ -148,8 +150,17 @@
   .navigation-list {
     li:hover {
       .hidemobile {
-        transition-duration: 300ms;
+        animation: fade 500ms ease-in-out;
         display: block;
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
       }
     }
   }
