@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -8,6 +8,10 @@ import { useContext } from 'react';
 import { AuthContext } from '../../context';
 
 const Header = () => {
+  const [product, setProduct] = useState(false);
+  const [useCase, setUseCase] = useState(false);
+  const [developers, setDevelopers] = useState(false);
+  const [company, setCompany] = useState(false);
   const { turnOffMenu, setTurnOffMenu } = useContext(AuthContext);
 
   const exitSideNavigation = () => {
@@ -19,6 +23,18 @@ const Header = () => {
       setTurnOffMenu(true);
     }
   };
+
+  const showDataMobileMenu = (item: boolean, setItem: any) => {
+    if (item === true) {
+      setItem(false);
+    }
+
+    if (item === false) {
+      setItem(true);
+    }
+  };
+
+  console.log(product, 'cia product');
 
   return (
     <div className="header">
@@ -49,7 +65,10 @@ const Header = () => {
 
         <nav className="navigation">
           <ul className="navigation-list">
-            <li className="navigation-list-element">
+            <li
+              className="navigation-list-element"
+              onClick={() => showDataMobileMenu(product, setProduct)}
+            >
               <div className="title-and-icon">
                 Product
                 <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
@@ -58,24 +77,78 @@ const Header = () => {
               <div className="hide-navigation-data">
                 <Product />
               </div>
+              {product ? (
+                <div className="hidemobile">
+                  <Product />
+                </div>
+              ) : (
+                ''
+              )}
+            </li>
 
-              <div className="hidemobile">
+            <li
+              className="navigation-list-element"
+              onClick={() => showDataMobileMenu(useCase, setUseCase)}
+            >
+              <div className="title-and-icon">
+                Use case
+                <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+              </div>
+
+              <div className="hide-navigation-data">
                 <Product />
               </div>
+              {useCase ? (
+                <div className="hidemobile">
+                  <Product />
+                </div>
+              ) : (
+                ''
+              )}
             </li>
 
-            <li>
-              Use cases
-              <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+            <li
+              className="navigation-list-element"
+              onClick={() => showDataMobileMenu(developers, setDevelopers)}
+            >
+              <div className="title-and-icon">
+                Developers
+                <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+              </div>
+
+              <div className="hide-navigation-data">
+                <Product />
+              </div>
+              {developers ? (
+                <div className="hidemobile">
+                  <Product />
+                </div>
+              ) : (
+                ''
+              )}
             </li>
-            <li>
-              Developers
-              <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
-            </li>
+
             <li>Pricing</li>
-            <li>
-              Company
-              <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+
+            <li
+              className="navigation-list-element"
+              onClick={() => showDataMobileMenu(company, setCompany)}
+            >
+              <div className="title-and-icon">
+                Developers
+                <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+              </div>
+
+              <div className="hide-navigation-data">
+                <Product />
+              </div>
+              {company ? (
+                <div className="hidemobile">
+                  <Product />
+                </div>
+              ) : (
+                ''
+              )}
             </li>
           </ul>
         </nav>

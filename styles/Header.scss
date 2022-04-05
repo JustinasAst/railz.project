@@ -150,19 +150,17 @@
   }
 
   .navigation-list {
-    li:hover {
-      .hidemobile {
-        animation: fade 500ms ease-in-out;
-        display: block;
-      }
+    .hidemobile {
+      animation: fade 500ms ease-in-out;
+      display: block;
+    }
 
-      @keyframes fade {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
       }
     }
   }

@@ -178,7 +178,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .navigation-list li:hover .hidemobile {
+  .navigation-list .hidemobile {
     -webkit-animation: fade 500ms ease-in-out;
             animation: fade 500ms ease-in-out;
     display: block;
