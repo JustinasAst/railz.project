@@ -1,8 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 import { FiArrowRight } from 'react-icons/fi';
+import { useContext } from 'react';
+import { AuthContext } from '../../context';
 
 export const Product = () => {
+  const { setTurnOffMenu } = useContext(AuthContext);
+
+  const exitMenuClickLink = () => {
+    setTurnOffMenu(true);
+  };
+
   return (
     <div className="product-main-container">
       <div className="product">
@@ -28,7 +36,7 @@ export const Product = () => {
             />
             <Link href="railz-api">
               <div className="navigation-data-box-content">
-                <h3>Railz API</h3>
+                <h3 onClick={exitMenuClickLink}>Railz API</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                   consequatur obcaecati nesciunt!hkjdsgasgagh m
@@ -36,6 +44,7 @@ export const Product = () => {
               </div>
             </Link>
           </div>
+
           <div className="navigation-data-box">
             <img
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F7edda16872%2Fconnect-02-64x64.svg&w=1920&q=80"
@@ -43,7 +52,7 @@ export const Product = () => {
             />
             <Link href="railz-connect">
               <div className="navigation-data-box-content">
-                <h3>Railz Connect</h3>
+                <h3 onClick={exitMenuClickLink}>Railz Connect</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                   consequatur obcaecati nesciunt!
@@ -51,6 +60,7 @@ export const Product = () => {
               </div>
             </Link>
           </div>
+
           <div className="navigation-data-box">
             <img
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F87a0438dce%2Fsites-64x64.svg&w=1920&q=80"
@@ -58,7 +68,7 @@ export const Product = () => {
             />
             <Link href="railz-sites">
               <div className="navigation-data-box-content">
-                <h3>Railz Sites</h3>
+                <h3 onClick={exitMenuClickLink}>Railz Sites</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                   consequatur obcaecati nesciunt!
@@ -74,7 +84,7 @@ export const Product = () => {
             />
             <Link href="railz-analytics">
               <div className="navigation-data-box-content">
-                <h3>Railz Analytics</h3>
+                <h3 onClick={exitMenuClickLink}>Railz Analytics</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                   consequatur obcaecati nesciunt!
@@ -82,6 +92,7 @@ export const Product = () => {
               </div>
             </Link>
           </div>
+
           <div className="navigation-data-box">
             <img
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F7edda16872%2Fconnect-02-64x64.svg&w=1920&q=80"
@@ -89,7 +100,7 @@ export const Product = () => {
             />
             <Link href="railz-insights">
               <div className="navigation-data-box-content">
-                <h3>Railz Insights</h3>
+                <h3 onClick={exitMenuClickLink}>Railz Insights</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                   consequatur obcaecati nesciunt!
@@ -97,6 +108,7 @@ export const Product = () => {
               </div>
             </Link>
           </div>
+
           <div className="navigation-data-box">
             <img
               src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F87a0438dce%2Fsites-64x64.svg&w=1920&q=80"
@@ -104,7 +116,7 @@ export const Product = () => {
             />
             <Link href="railz-dashboard">
               <div className="navigation-data-box-content">
-                <h3>Railz Dashboard</h3>
+                <h3 onClick={exitMenuClickLink}>Railz Dashboard</h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                   ksaos saklsdkl klasklksa

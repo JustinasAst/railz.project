@@ -34,8 +34,6 @@ const Header = () => {
     }
   };
 
-  console.log(product, 'cia product');
-
   return (
     <div className="header">
       <Link href="/">
