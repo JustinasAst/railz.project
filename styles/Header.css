@@ -89,6 +89,14 @@
   font-size: 15px;
 }
 
+.login-btn:hover {
+  background-color: rgba(8, 8, 8, 0.85);
+}
+
+.get-started-btn:hover {
+  background-color: rgba(0, 149, 87, 0.85);
+}
+
 .navigation-arrow-icon {
   margin-left: 5px;
   font-size: 20px;
