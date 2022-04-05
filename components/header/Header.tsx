@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';

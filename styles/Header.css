@@ -69,22 +69,24 @@
 }
 
 .login-btn {
-  background-color: black;
+  background-color: #080808;
   border: none;
   color: #fafafa;
-  padding: 16px;
-  border-radius: 5px;
+  padding: 18px;
+  border-radius: 8px;
   font-weight: 600;
+  font-size: 15px;
 }
 
 .get-started-btn {
-  background-color: #00884e;
+  background-color: #009556;
   border: none;
   color: #fafafa;
-  padding: 16px;
-  border-radius: 5px;
+  padding: 18px;
+  border-radius: 8px;
   margin-left: 15px;
   font-weight: 600;
+  font-size: 15px;
 }
 
 .navigation-arrow-icon {

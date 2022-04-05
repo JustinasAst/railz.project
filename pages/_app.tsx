@@ -9,7 +9,7 @@ import type { AppProps } from 'next/app';
 import AuthProvider from '../context';
 import Header from '../components/header/Header';
 import ExitBackgound from '../components/exitBackground/ExitBackgound';
-import Footer from '../components/footer/Footer';
+import Layout from '../components/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
