@@ -175,6 +175,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    font-weight: 600;
     width: 100%;
   }
   .navigation-list-element {

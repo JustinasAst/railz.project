@@ -126,7 +126,9 @@ const Header = () => {
               )}
             </li>
 
-            <li>Pricing</li>
+            <li>
+              <div className="title-and-icon">Pricing</div>
+            </li>
 
             <li
               className="navigation-list-element"

@@ -104,18 +104,22 @@
   .navigation-data-box img {
     display: none;
   }
+  .navigation-data-box-content {
+    padding-left: 0px;
+  }
   .navigation-data-box-content p {
     display: none;
   }
   .navigation-data-box-content h3 {
-    margin: 10px;
+    margin: 10px 0;
     font-size: 20px;
+    font-weight: 100;
   }
   .navigation-data-info-section {
     display: none;
   }
   .product-main-container {
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
     background-color: white;
   }
   .product {
