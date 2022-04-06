@@ -4,7 +4,7 @@ import { FiArrowRight } from 'react-icons/fi';
 import { useContext } from 'react';
 import { AuthContext } from '../../context';
 
-export const Product = () => {
+export const Product: React.FC = () => {
   const { setTurnOffMenu } = useContext(AuthContext);
 
   const exitMenuClickLink = () => {
@@ -23,7 +23,7 @@ export const Product = () => {
             quae sint laboriosam. sit amet consectetur adipisicing elit.
             Corrupti incidunt consectetur quae sint laboriosam.
           </p>
-          <button className="navigation-info-button">
+          <button type="button" className="navigation-info-button">
             Learn more
             <FiArrowRight className="arrow-roght" />
           </button>

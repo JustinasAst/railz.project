@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Article = () => {
+const Article: React.FC = () => {
   return (
     <div className="main-article-section">
       <div className="article-section">
@@ -10,7 +10,9 @@ const Article = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A animi
             fugiat autem corporis labore, ab tenetur aliquid!
           </p>
-          <button className="article-btn">Get started</button>
+          <button type="button" className="article-btn">
+            Get started
+          </button>
         </div>
         <div className="logo-component">
           <img

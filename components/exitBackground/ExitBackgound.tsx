@@ -2,9 +2,9 @@ import React from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../../context';
 
-interface ComponentProps {
-  children: any;
-}
+type ComponentProps = {
+  children?: React.ReactNode;
+};
 
 const ExitBackgound: React.FC<ComponentProps> = ({ children }) => {
   const { setTurnOffMenu, turnOffMenu } = useContext(AuthContext);

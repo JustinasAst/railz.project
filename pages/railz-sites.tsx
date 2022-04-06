@@ -12,7 +12,9 @@ const RailzSites = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A animi
                 fugiat autem corporis labore, ab tenetur aliquid!
               </p>
-              <button className="article-btn">Get started</button>
+              <button type="button" className="article-btn">
+                Get started
+              </button>
             </div>
 
             <div className="logo-component">

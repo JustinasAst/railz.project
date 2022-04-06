@@ -1,18 +1,21 @@
 import React, { useState, createContext } from 'react';
 
-interface AppContextInterface {
+type AppContextInterface = {
   turnOffMenu: boolean;
   setTurnOffMenu: (value: boolean) => void;
-}
+};
 
-interface ComponentProps {
-  children: any;
-}
+type ComponentProps = {
+  children?: React.ReactNode;
+};
 
-export const AuthContext = createContext<AppContextInterface | any>(null);
+export const AuthContext = createContext<AppContextInterface>({
+  turnOffMenu: false,
+  setTurnOffMenu: () => {},
+});
 
 const AuthProvider: React.FC<ComponentProps> = ({ children }) => {
-  const [turnOffMenu, setTurnOffMenu] = useState(false);
+  const [turnOffMenu, setTurnOffMenu] = useState<boolean>(false);
 
   return (
     <AuthContext.Provider value={{ turnOffMenu, setTurnOffMenu }}>

@@ -7,11 +7,11 @@ import Product from '../product/Product';
 import { useContext } from 'react';
 import { AuthContext } from '../../context';
 
-const Header = () => {
-  const [product, setProduct] = useState(false);
-  const [useCase, setUseCase] = useState(false);
-  const [developers, setDevelopers] = useState(false);
-  const [company, setCompany] = useState(false);
+const Header: React.FC = () => {
+  const [product, setProduct] = useState<boolean>(false);
+  const [useCase, setUseCase] = useState<boolean>(false);
+  const [developers, setDevelopers] = useState<boolean>(false);
+  const [company, setCompany] = useState<boolean>(false);
   const { turnOffMenu, setTurnOffMenu } = useContext(AuthContext);
 
   const exitSideNavigation = () => {
@@ -24,7 +24,7 @@ const Header = () => {
     }
   };
 
-  const showDataMobileMenu = (item: boolean, setItem: any) => {
+  const showDataMobileMenu = (item: boolean, setItem: (a: boolean) => void) => {
     if (item === true) {
       setItem(false);
     }
@@ -79,9 +79,7 @@ const Header = () => {
                 <div className="hidemobile">
                   <Product />
                 </div>
-              ) : (
-                ''
-              )}
+              ) : null}
             </li>
 
             <li
@@ -100,9 +98,7 @@ const Header = () => {
                 <div className="hidemobile">
                   <Product />
                 </div>
-              ) : (
-                ''
-              )}
+              ) : null}
             </li>
 
             <li
@@ -121,9 +117,7 @@ const Header = () => {
                 <div className="hidemobile">
                   <Product />
                 </div>
-              ) : (
-                ''
-              )}
+              ) : null}
             </li>
 
             <li>
@@ -146,16 +140,18 @@ const Header = () => {
                 <div className="hidemobile">
                   <Product />
                 </div>
-              ) : (
-                ''
-              )}
+              ) : null}
             </li>
           </ul>
         </nav>
 
         <div className="header-btn-container">
-          <button className="login-btn">Log In</button>
-          <button className="get-started-btn">Get started</button>
+          <button type="button" className="login-btn">
+            Log In
+          </button>
+          <button type="button" className="get-started-btn">
+            Get started
+          </button>
         </div>
       </div>
 
