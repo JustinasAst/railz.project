@@ -68,7 +68,7 @@
   margin-top: 1430px;
 }
 
-.login-btn {
+.login-btn, .get-started-btn {
   background-color: #080808;
   border: none;
   color: #fafafa;
@@ -80,16 +80,10 @@
 
 .get-started-btn {
   background-color: #009556;
-  border: none;
-  color: #fafafa;
-  padding: 18px;
-  border-radius: 8px;
   margin-left: 15px;
-  font-weight: 600;
-  font-size: 15px;
 }
 
-.login-btn:hover {
+.login-btn:hover, .get-started-btn:hover {
   background-color: rgba(8, 8, 8, 0.85);
 }
 
@@ -258,9 +252,13 @@
   }
   .header-btn-container {
     margin-top: auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .header-btn-container button {
-    width: 200px;
+    width: 100%;
   }
   .meniu-icon {
     display: block;
@@ -271,18 +269,6 @@
   }
   .navigation {
     width: 100%;
-  }
-}
-
-@media (max-width: 1260px) and (max-width: 475px) {
-  .header-btn-container button {
-    width: 150px;
-  }
-}
-
-@media (max-width: 1260px) and (max-width: 375px) {
-  .header-btn-container button {
-    width: 120px;
   }
 }
 /*# sourceMappingURL=Header.css.map */
