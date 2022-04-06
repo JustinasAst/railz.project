@@ -14,24 +14,8 @@ const Header: React.FC = () => {
   const [company, setCompany] = useState<boolean>(false);
   const { turnOffMenu, setTurnOffMenu } = useContext(AuthContext);
 
-  const exitSideNavigation = () => {
-    if (turnOffMenu === true) {
-      setTurnOffMenu(false);
-    }
-
-    if (turnOffMenu === false) {
-      setTurnOffMenu(true);
-    }
-  };
-
-  const showDataMobileMenu = (item: boolean, setItem: (a: boolean) => void) => {
-    if (item === true) {
-      setItem(false);
-    }
-
-    if (item === false) {
-      setItem(true);
-    }
+  const turnOnTurnOffData = (item: boolean, setItem: (a: boolean) => void) => {
+    setItem(!item);
   };
 
   return (
@@ -58,7 +42,7 @@ const Header: React.FC = () => {
           <div>
             <GrClose
               className="header-exit-button"
-              onClick={exitSideNavigation}
+              onClick={() => turnOnTurnOffData(turnOffMenu, setTurnOffMenu)}
             />
           </div>
         </div>
@@ -67,7 +51,7 @@ const Header: React.FC = () => {
           <ul className="navigation-list">
             <li
               className="navigation-list-element"
-              onClick={() => showDataMobileMenu(product, setProduct)}
+              onClick={() => turnOnTurnOffData(product, setProduct)}
             >
               <div className="title-and-icon">
                 Product
@@ -86,7 +70,7 @@ const Header: React.FC = () => {
 
             <li
               className="navigation-list-element"
-              onClick={() => showDataMobileMenu(useCase, setUseCase)}
+              onClick={() => turnOnTurnOffData(useCase, setUseCase)}
             >
               <div className="title-and-icon">
                 Use case
@@ -105,7 +89,7 @@ const Header: React.FC = () => {
 
             <li
               className="navigation-list-element"
-              onClick={() => showDataMobileMenu(developers, setDevelopers)}
+              onClick={() => turnOnTurnOffData(developers, setDevelopers)}
             >
               <div className="title-and-icon">
                 Developers
@@ -128,7 +112,7 @@ const Header: React.FC = () => {
 
             <li
               className="navigation-list-element"
-              onClick={() => showDataMobileMenu(company, setCompany)}
+              onClick={() => turnOnTurnOffData(company, setCompany)}
             >
               <div className="title-and-icon">
                 Developers
@@ -157,7 +141,10 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      <GiHamburgerMenu className="meniu-icon" onClick={exitSideNavigation} />
+      <GiHamburgerMenu
+        className="meniu-icon"
+        onClick={() => turnOnTurnOffData(turnOffMenu, setTurnOffMenu)}
+      />
     </div>
   );
 };
