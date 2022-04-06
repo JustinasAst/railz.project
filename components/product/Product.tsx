@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import NavigationLinkData from '../navigationLinkData/NavigationLinkData';
 import { FiArrowRight } from 'react-icons/fi';
 import { useContext } from 'react';
 import { AuthContext } from '../../context';
@@ -10,6 +11,51 @@ export const Product: React.FC = () => {
   const exitMenu = () => {
     setMenuTurnedOff(true);
   };
+
+  const navigationLinksData = [
+    {
+      id: 1,
+      img: 'https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2Fe961c92e9b%2Fapi-64x64.svg&w=1920&q=80',
+      link: '/railz-api',
+      title: 'Railz API',
+      text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur obcaecati nesciunt!hkjdsgasgagh m',
+    },
+    {
+      id: 2,
+      img: 'https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F7edda16872%2Fconnect-02-64x64.svg&w=1920&q=80',
+      link: '/railz-connect',
+      title: 'Railz Connect',
+      text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur obcaecati nesciunt!',
+    },
+    {
+      id: 3,
+      img: 'https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F87a0438dce%2Fsites-64x64.svg&w=1920&q=80',
+      link: '/railz-sites',
+      title: 'Railz Sites',
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Quis consequatur obcaecati nesciunt!',
+    },
+    {
+      id: 4,
+      img: 'https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2Fe961c92e9b%2Fapi-64x64.svg&w=1920&q=80',
+      link: '/railz-analytics',
+      title: 'Railz Analytics',
+      text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur obcaecati nesciunt!',
+    },
+    {
+      id: 5,
+      img: 'https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F7edda16872%2Fconnect-02-64x64.svg&w=1920&q=80',
+      link: '/railz-insights',
+      title: 'Railz Insights',
+      text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consequatur obcaecati nesciunt!',
+    },
+    {
+      id: 6,
+      img: 'https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F87a0438dce%2Fsites-64x64.svg&w=1920&q=80',
+      link: '/railz-dashboard',
+      title: 'Railz Dashboard',
+      text: ' Lorem ipsum dolor sit amet consectetur adipisicing elit.Quis ksaos saklsdkl klasklksa',
+    },
+  ];
 
   return (
     <div className="product-main-container">
@@ -29,113 +75,19 @@ export const Product: React.FC = () => {
           </button>
         </div>
         <div className="navigattion-links-section">
-          <div className="navigation-data-box">
-            <img
-              src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2Fe961c92e9b%2Fapi-64x64.svg&w=1920&q=80"
-              alt="railz API"
-            />
-            <Link href="/railz-api" passHref>
-              <a>
-                <div className="navigation-data-box-content">
-                  <h3 onClick={exitMenu}>Railz API</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quis consequatur obcaecati nesciunt!hkjdsgasgagh m
-                  </p>
-                </div>
-              </a>
-            </Link>
-          </div>
-
-          <div className="navigation-data-box">
-            <img
-              src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F7edda16872%2Fconnect-02-64x64.svg&w=1920&q=80"
-              alt="railz connect"
-            />
-            <Link href="/railz-connect" passHref>
-              <a>
-                <div className="navigation-data-box-content">
-                  <h3 onClick={exitMenu}>Railz Connect</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quis consequatur obcaecati nesciunt!
-                  </p>
-                </div>
-              </a>
-            </Link>
-          </div>
-
-          <div className="navigation-data-box">
-            <img
-              src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F87a0438dce%2Fsites-64x64.svg&w=1920&q=80"
-              alt="railz sites"
-            />
-            <Link href="/railz-sites" passHref>
-              <a>
-                <div className="navigation-data-box-content">
-                  <h3 onClick={exitMenu}>Railz Sites</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quis consequatur obcaecati nesciunt!
-                  </p>
-                </div>
-              </a>
-            </Link>
-          </div>
-
-          <div className="navigation-data-box">
-            <img
-              src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2Fe961c92e9b%2Fapi-64x64.svg&w=1920&q=80"
-              alt="railz API"
-            />
-            <Link href="/railz-analytics" passHref>
-              <a>
-                <div className="navigation-data-box-content">
-                  <h3 onClick={exitMenu}>Railz Analytics</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quis consequatur obcaecati nesciunt!
-                  </p>
-                </div>
-              </a>
-            </Link>
-          </div>
-
-          <div className="navigation-data-box">
-            <img
-              src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F7edda16872%2Fconnect-02-64x64.svg&w=1920&q=80"
-              alt="railz connect"
-            />
-            <Link href="/railz-insights" passHref>
-              <a>
-                <div className="navigation-data-box-content">
-                  <h3 onClick={exitMenu}>Railz Insights</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quis consequatur obcaecati nesciunt!
-                  </p>
-                </div>
-              </a>
-            </Link>
-          </div>
-
-          <div className="navigation-data-box">
-            <img
-              src="https://railz.ai/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F124388%2Fx%2F87a0438dce%2Fsites-64x64.svg&w=1920&q=80"
-              alt="railz sites"
-            />
-            <Link href="/railz-dashboard" passHref>
-              <a>
-                <div className="navigation-data-box-content">
-                  <h3 onClick={exitMenu}>Railz Dashboard</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quis ksaos saklsdkl klasklksa
-                  </p>
-                </div>
-              </a>
-            </Link>
-          </div>
+          {navigationLinksData.map((item) => (
+            <div className="navigation-data-box" key={item.id}>
+              <img src={item.img} alt={item.title} />
+              <Link href={item.link} passHref>
+                <a>
+                  <div className="navigation-data-box-content">
+                    <h3 onClick={exitMenu}>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </div>
+                </a>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </div>

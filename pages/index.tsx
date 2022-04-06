@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Footer from '../components/footer/Footer';
+import FooterInfo from '../components/footerInfo/FooterInfo';
 import Article from '../components/article/Article';
 import styles from '../styles/Home.module.css';
 import { useContext } from 'react';
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       </main>
 
       <footer className={styles.footer}>
-        <Footer />
+        <FooterInfo />
       </footer>
     </div>
   );
