@@ -7,11 +7,11 @@ import { useContext } from 'react';
 import { AuthContext } from '../context';
 
 const Home: NextPage = () => {
-  const { menuTurnOff } = useContext(AuthContext);
+  const { menuTurnedOff } = useContext(AuthContext);
 
   return (
     <div
-      className={[styles.container, !menuTurnOff ? styles.shadow : null].join(
+      className={[styles.container, !menuTurnedOff ? styles.shadow : null].join(
         ' '
       )}
     >
