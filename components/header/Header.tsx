@@ -36,12 +36,14 @@ const Header: React.FC = () => {
 
   return (
     <div className="header">
-      <Link href="/">
-        <img
-          className="company-logo-header"
-          src="https://cdn-images-1.medium.com/max/558/1*18_NefqHGveV7zR2zKKYbQ@2x.png"
-          alt="railz"
-        />
+      <Link href="/" passHref>
+        <a>
+          <img
+            className="company-logo-header"
+            src="https://cdn-images-1.medium.com/max/558/1*18_NefqHGveV7zR2zKKYbQ@2x.png"
+            alt="railz"
+          />
+        </a>
       </Link>
 
       <div className={`navigation-container ${turnOffMenu ? 'open' : ' '} `}>
