@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RailzInsights = () => {
+const RailzInsights: React.FC = () => {
   return (
     <div className="main-railz-container">
       <div className="page-container">

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RailzDashboard = () => {
+const RailzDashboard: React.FC = () => {
   return (
     <div className="main-railz-container">
       <div className="page-container">

@@ -6,18 +6,17 @@ type ComponentProps = {
   children?: React.ReactNode;
 };
 
-const ExitBackgound: React.FC<ComponentProps> = ({ children }) => {
+const MenuExitOverlay: React.FC<ComponentProps> = ({ children }) => {
   const { setMenuTurnedOff, menuTurnedOff } = useContext(AuthContext);
 
-  const backgroundExit = () => {
-    setMenuTurnedOff(true);
-  };
-
   return (
-    <div className={menuTurnedOff ? '' : 'exit'} onClick={backgroundExit}>
+    <div
+      className={menuTurnedOff ? '' : 'exit'}
+      onClick={() => setMenuTurnedOff(!menuTurnedOff)}
+    >
       {children}
     </div>
   );
 };
 
-export default ExitBackgound;
+export default MenuExitOverlay;

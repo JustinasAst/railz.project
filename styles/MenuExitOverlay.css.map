@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "AAAA,MAAM,EAAE,SAAS,EAAE,MAAM;EACvB,AAAA,KAAK,CAAC;IACJ,gBAAgB,EAAE,wBAAwB;IAC1C,QAAQ,EAAE,QAAQ;IAClB,OAAO,EAAE,EAAE;IACX,GAAG,EAAE,CAAC;IACN,IAAI,EAAE,CAAC;IACP,KAAK,EAAE,CAAC;IACR,MAAM,EAAE,CAAC;GACV",
     "sources": [
-        "ExitBackground.scss"
+        "MenuExitOverlay.scss"
     ],
     "names": [],
-    "file": "ExitBackground.css"
+    "file": "MenuExitOverlay.css"
 }
