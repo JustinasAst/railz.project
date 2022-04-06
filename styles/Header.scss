@@ -30,6 +30,7 @@
     font-weight: 400;
     font-size: 18px;
     cursor: pointer;
+
     .navigation-arrow-icon {
       transition: 300ms ease-in-out;
     }
@@ -141,6 +142,7 @@
     right: 1;
     overflow: auto;
     transition-duration: 250ms;
+
     .navigation-list {
       flex-direction: column;
     }

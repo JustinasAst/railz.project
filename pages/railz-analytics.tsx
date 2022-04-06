@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RailzAnalytics = () => {
+const RailzAnalytics: React.FC = () => {
   return (
     <div className="main-railz-container">
       <div className="page-container">

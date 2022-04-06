@@ -7,7 +7,7 @@ import { AuthContext } from '../../context';
 export const Product: React.FC = () => {
   const { setMenuTurnedOff } = useContext(AuthContext);
 
-  const exitMenuClickLink = () => {
+  const exitMenu = () => {
     setMenuTurnedOff(true);
   };
 
@@ -37,7 +37,7 @@ export const Product: React.FC = () => {
             <Link href="/railz-api" passHref>
               <a>
                 <div className="navigation-data-box-content">
-                  <h3 onClick={exitMenuClickLink}>Railz API</h3>
+                  <h3 onClick={exitMenu}>Railz API</h3>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quis consequatur obcaecati nesciunt!hkjdsgasgagh m
@@ -55,7 +55,7 @@ export const Product: React.FC = () => {
             <Link href="/railz-connect" passHref>
               <a>
                 <div className="navigation-data-box-content">
-                  <h3 onClick={exitMenuClickLink}>Railz Connect</h3>
+                  <h3 onClick={exitMenu}>Railz Connect</h3>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quis consequatur obcaecati nesciunt!
@@ -73,7 +73,7 @@ export const Product: React.FC = () => {
             <Link href="/railz-sites" passHref>
               <a>
                 <div className="navigation-data-box-content">
-                  <h3 onClick={exitMenuClickLink}>Railz Sites</h3>
+                  <h3 onClick={exitMenu}>Railz Sites</h3>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quis consequatur obcaecati nesciunt!
@@ -91,7 +91,7 @@ export const Product: React.FC = () => {
             <Link href="/railz-analytics" passHref>
               <a>
                 <div className="navigation-data-box-content">
-                  <h3 onClick={exitMenuClickLink}>Railz Analytics</h3>
+                  <h3 onClick={exitMenu}>Railz Analytics</h3>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quis consequatur obcaecati nesciunt!
@@ -109,7 +109,7 @@ export const Product: React.FC = () => {
             <Link href="/railz-insights" passHref>
               <a>
                 <div className="navigation-data-box-content">
-                  <h3 onClick={exitMenuClickLink}>Railz Insights</h3>
+                  <h3 onClick={exitMenu}>Railz Insights</h3>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quis consequatur obcaecati nesciunt!
@@ -127,7 +127,7 @@ export const Product: React.FC = () => {
             <Link href="/railz-dashboard" passHref>
               <a>
                 <div className="navigation-data-box-content">
-                  <h3 onClick={exitMenuClickLink}>Railz Dashboard</h3>
+                  <h3 onClick={exitMenu}>Railz Dashboard</h3>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Quis ksaos saklsdkl klasklksa
