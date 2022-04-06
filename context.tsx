@@ -1,8 +1,8 @@
 import React, { useState, createContext } from 'react';
 
 type AppContextInterface = {
-  turnOffMenu: boolean;
-  setTurnOffMenu: (value: boolean) => void;
+  menuTurnOff: boolean;
+  setMenuTurnOff: (value: boolean) => void;
 };
 
 type ComponentProps = {
@@ -10,15 +10,15 @@ type ComponentProps = {
 };
 
 export const AuthContext = createContext<AppContextInterface>({
-  turnOffMenu: false,
-  setTurnOffMenu: () => {},
+  menuTurnOff: false,
+  setMenuTurnOff: () => {},
 });
 
 const AuthProvider: React.FC<ComponentProps> = ({ children }) => {
-  const [turnOffMenu, setTurnOffMenu] = useState<boolean>(false);
+  const [menuTurnOff, setMenuTurnOff] = useState<boolean>(false);
 
   return (
-    <AuthContext.Provider value={{ turnOffMenu, setTurnOffMenu }}>
+    <AuthContext.Provider value={{ menuTurnOff, setMenuTurnOff }}>
       {children}
     </AuthContext.Provider>
   );

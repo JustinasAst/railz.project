@@ -7,14 +7,14 @@ type ComponentProps = {
 };
 
 const ExitBackgound: React.FC<ComponentProps> = ({ children }) => {
-  const { setTurnOffMenu, turnOffMenu } = useContext(AuthContext);
+  const { setMenuTurnOff, menuTurnOff } = useContext(AuthContext);
 
   const backgroundExit = () => {
-    setTurnOffMenu(true);
+    setMenuTurnOff(true);
   };
 
   return (
-    <div className={turnOffMenu ? ' ' : 'exit'} onClick={backgroundExit}>
+    <div className={menuTurnOff ? ' ' : 'exit'} onClick={backgroundExit}>
       {children}
     </div>
   );

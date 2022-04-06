@@ -12,7 +12,7 @@ const Header: React.FC = () => {
   const [useCase, setUseCase] = useState<boolean>(false);
   const [developers, setDevelopers] = useState<boolean>(false);
   const [company, setCompany] = useState<boolean>(false);
-  const { turnOffMenu, setTurnOffMenu } = useContext(AuthContext);
+  const { menuTurnOff, setMenuTurnOff } = useContext(AuthContext);
 
   const turnOnTurnOffData = (item: boolean, setItem: (a: boolean) => void) => {
     setItem(!item);
@@ -30,7 +30,7 @@ const Header: React.FC = () => {
         </a>
       </Link>
 
-      <div className={`navigation-container ${turnOffMenu ? 'open' : ' '} `}>
+      <div className={`navigation-container ${menuTurnOff ? 'open' : ' '} `}>
         <div className="navigation-header">
           <div className="phone-header-logo">
             <img
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
           <div>
             <GrClose
               className="header-exit-button"
-              onClick={() => turnOnTurnOffData(turnOffMenu, setTurnOffMenu)}
+              onClick={() => turnOnTurnOffData(menuTurnOff, setMenuTurnOff)}
             />
           </div>
         </div>
@@ -143,7 +143,7 @@ const Header: React.FC = () => {
 
       <GiHamburgerMenu
         className="meniu-icon"
-        onClick={() => turnOnTurnOffData(turnOffMenu, setTurnOffMenu)}
+        onClick={() => turnOnTurnOffData(menuTurnOff, setMenuTurnOff)}
       />
     </div>
   );

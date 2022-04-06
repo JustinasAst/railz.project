@@ -5,10 +5,10 @@ import { useContext } from 'react';
 import { AuthContext } from '../../context';
 
 export const Product: React.FC = () => {
-  const { setTurnOffMenu } = useContext(AuthContext);
+  const { setMenuTurnOff } = useContext(AuthContext);
 
   const exitMenuClickLink = () => {
-    setTurnOffMenu(true);
+    setMenuTurnOff(true);
   };
 
   return (
