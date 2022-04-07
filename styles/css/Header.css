@@ -65,7 +65,7 @@
 }
 
 .navigation-list li:hover .hide-navigation-data {
-  margin-top: 1430px;
+  margin-top: 1030px;
 }
 
 .login-btn, .get-started-btn {
@@ -271,4 +271,3 @@
     width: 100%;
   }
 }
-/*# sourceMappingURL=Header.css.map */
