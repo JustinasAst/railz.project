@@ -1,5 +1,5 @@
 .header {
-  padding: 26px 50px;
+  padding: 0px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,6 +15,7 @@
 
 .header img {
   width: 150px;
+  cursor: pointer;
 }
 
 .navigation {
@@ -27,10 +28,12 @@
   display: flex;
   text-decoration: none;
   list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .navigation-list li {
-  padding: 0 20px;
+  padding: 40px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,32 +42,53 @@
           align-items: center;
   font-weight: 400;
   font-size: 18px;
+  cursor: pointer;
+}
+
+.navigation-list li .navigation-arrow-icon {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+.hide-navigation-data {
+  left: 0;
+  right: 0;
+  position: absolute;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  z-index: -1;
 }
 
 .navigation-list li:hover .navigation-arrow-icon {
-  -webkit-transform: rotateZ(180deg);
-          transform: rotateZ(180deg);
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-.login-btn {
-  background-color: black;
+.navigation-list li:hover .hide-navigation-data {
+  margin-top: 1030px;
+}
+
+.login-btn, .get-started-btn {
+  background-color: #080808;
   border: none;
   color: #fafafa;
-  padding: 16px;
-  border-radius: 5px;
+  padding: 18px;
+  border-radius: 8px;
   font-weight: 600;
+  font-size: 15px;
 }
 
 .get-started-btn {
-  background-color: #00884e;
-  border: none;
-  color: #fafafa;
-  padding: 16px;
-  border-radius: 5px;
+  background-color: #009556;
   margin-left: 15px;
-  font-weight: 600;
+}
+
+.login-btn:hover, .get-started-btn:hover {
+  background-color: rgba(8, 8, 8, 0.85);
+}
+
+.get-started-btn:hover {
+  background-color: rgba(0, 149, 87, 0.85);
 }
 
 .navigation-arrow-icon {
@@ -97,7 +121,24 @@
   display: none;
 }
 
+.hide-navigation-data {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -100%;
+}
+
+.hidemobile {
+  display: none;
+}
+
 @media (max-width: 1260px) {
+  .header {
+    padding: 27px 50px;
+  }
+  .hide-navigation-data {
+    display: none;
+  }
   .navigation-container {
     top: 0;
     right: 0;
@@ -112,8 +153,8 @@
     padding: 30px 30px;
     right: 1;
     overflow: auto;
-    -webkit-transition-duration: 0.25s;
-            transition-duration: 0.25s;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
   }
   .navigation-container .navigation-list {
     -webkit-box-orient: vertical;
@@ -121,10 +162,50 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .title-and-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-weight: 600;
+    width: 100%;
+  }
+  .navigation-list-element {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navigation-list .hidemobile {
+    -webkit-animation: fade 500ms ease-in-out;
+            animation: fade 500ms ease-in-out;
+    display: block;
+  }
+  @-webkit-keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   .navigation-container.open {
     right: -100%;
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
+    -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
   }
   .header-exit-button {
     display: block;
@@ -153,7 +234,7 @@
     padding-left: 0;
   }
   .navigation-list li {
-    height: 40px;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -171,9 +252,13 @@
   }
   .header-btn-container {
     margin-top: auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .header-btn-container button {
-    width: 200px;
+    width: 100%;
   }
   .meniu-icon {
     display: block;
@@ -186,16 +271,3 @@
     width: 100%;
   }
 }
-
-@media (max-width: 1260px) and (max-width: 475px) {
-  .header-btn-container button {
-    width: 150px;
-  }
-}
-
-@media (max-width: 1260px) and (max-width: 375px) {
-  .header-btn-container button {
-    width: 120px;
-  }
-}
-/*# sourceMappingURL=Header.css.map */

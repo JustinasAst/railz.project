@@ -1,16 +1,17 @@
 import type { NextPage } from 'next';
-import React, { useState } from 'react';
 import Head from 'next/head';
-import Header from '../components/header/Header';
+import FooterInfo from '../components/footerInfo/FooterInfo';
 import Article from '../components/article/Article';
 import styles from '../styles/Home.module.css';
+import { useContext } from 'react';
+import { AuthContext } from '../context';
 
 const Home: NextPage = () => {
-  const [sideMeniuOpen, setSideMeniuOpen] = useState(false);
+  const { menuTurnedOff } = useContext(AuthContext);
 
   return (
     <div
-      className={[styles.container, !sideMeniuOpen ? styles.shadow : ' '].join(
+      className={[styles.container, !menuTurnedOff ? styles.shadow : null].join(
         ' '
       )}
     >
@@ -20,15 +21,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header
-        sideMeniuOpen={sideMeniuOpen}
-        setSideMeniuOpen={setSideMeniuOpen}
-      />
       <main className={styles.main}>
         <Article />
       </main>
 
-      <footer className={styles.footer}></footer>
+      <footer className={styles.footer}>
+        <FooterInfo />
+      </footer>
     </div>
   );
 };

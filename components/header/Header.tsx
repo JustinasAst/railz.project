@@ -1,37 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
+import Product from '../product/Product';
+import { useContext } from 'react';
+import { AuthContext } from '../../context';
 
-interface ComponentsProps {
-  sideMeniuOpen: boolean;
-  setSideMeniuOpen: any;
-}
-
-const Header: React.FC<ComponentsProps> = ({
-  sideMeniuOpen,
-  setSideMeniuOpen,
-}) => {
-  const exitSideNavigation = () => {
-    if (sideMeniuOpen === true) {
-      setSideMeniuOpen(false);
-    }
-
-    if (sideMeniuOpen === false) {
-      setSideMeniuOpen(true);
-    }
-  };
-  console.log(sideMeniuOpen);
+const Header: React.FC = () => {
+  const [product, setProduct] = useState<boolean>(false);
+  const [useCase, setUseCase] = useState<boolean>(false);
+  const [developers, setDevelopers] = useState<boolean>(false);
+  const [company, setCompany] = useState<boolean>(false);
+  const { menuTurnedOff, setMenuTurnedOff } = useContext(AuthContext);
 
   return (
     <div className="header">
-      <img
-        className="company-logo-header"
-        src="https://cdn-images-1.medium.com/max/558/1*18_NefqHGveV7zR2zKKYbQ@2x.png"
-        alt="railz"
-      />
+      <Link href="/" passHref>
+        <a>
+          <img
+            className="company-logo-header"
+            src="https://cdn-images-1.medium.com/max/558/1*18_NefqHGveV7zR2zKKYbQ@2x.png"
+            alt="railz"
+          />
+        </a>
+      </Link>
 
-      <div className={`navigation-container ${sideMeniuOpen ? 'open' : ''} `}>
+      <div className={`navigation-container ${menuTurnedOff ? 'open' : ''} `}>
         <div className="navigation-header">
           <div className="phone-header-logo">
             <img
@@ -39,40 +34,113 @@ const Header: React.FC<ComponentsProps> = ({
               alt="reilz"
             />
           </div>
+
           <div>
             <GrClose
               className="header-exit-button"
-              onClick={exitSideNavigation}
+              onClick={() => setMenuTurnedOff(!menuTurnedOff)}
             />
           </div>
         </div>
+
         <nav className="navigation">
           <ul className="navigation-list">
-            <li>
-              Product
-              <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+            <li
+              className="navigation-list-element"
+              onClick={() => setProduct(!product)}
+            >
+              <div className="title-and-icon">
+                Product
+                <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+              </div>
+
+              <div className="hide-navigation-data">
+                <Product />
+              </div>
+              {product ? (
+                <div className="hidemobile">
+                  <Product />
+                </div>
+              ) : null}
             </li>
-            <li>
-              Use cases
-              <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+
+            <li
+              className="navigation-list-element"
+              onClick={() => setUseCase(!useCase)}
+            >
+              <div className="title-and-icon">
+                Use case
+                <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+              </div>
+
+              <div className="hide-navigation-data">
+                <Product />
+              </div>
+              {useCase ? (
+                <div className="hidemobile">
+                  <Product />
+                </div>
+              ) : null}
             </li>
-            <li>
-              Developers
-              <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+
+            <li
+              className="navigation-list-element"
+              onClick={() => setDevelopers(!developers)}
+            >
+              <div className="title-and-icon">
+                Developers
+                <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+              </div>
+
+              <div className="hide-navigation-data">
+                <Product />
+              </div>
+              {developers ? (
+                <div className="hidemobile">
+                  <Product />
+                </div>
+              ) : null}
             </li>
-            <li>Pricing</li>
+
             <li>
-              Company
-              <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+              <div className="title-and-icon">Pricing</div>
+            </li>
+
+            <li
+              className="navigation-list-element"
+              onClick={() => setCompany(!company)}
+            >
+              <div className="title-and-icon">
+                Developers
+                <MdOutlineKeyboardArrowDown className="navigation-arrow-icon" />
+              </div>
+
+              <div className="hide-navigation-data">
+                <Product />
+              </div>
+              {company ? (
+                <div className="hidemobile">
+                  <Product />
+                </div>
+              ) : null}
             </li>
           </ul>
         </nav>
+
         <div className="header-btn-container">
-          <button className="login-btn">Log In</button>
-          <button className="get-started-btn">Get started</button>
+          <button type="button" className="login-btn">
+            Log In
+          </button>
+          <button type="button" className="get-started-btn">
+            Get started
+          </button>
         </div>
       </div>
-      <GiHamburgerMenu className="meniu-icon" onClick={exitSideNavigation} />
+
+      <GiHamburgerMenu
+        className="meniu-icon"
+        onClick={() => setMenuTurnedOff(!menuTurnedOff)}
+      />
     </div>
   );
 };

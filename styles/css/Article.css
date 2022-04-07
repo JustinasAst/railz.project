@@ -5,7 +5,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px 20px;
+  padding: 40px 20px;
+}
+
+.navigation-data-box-content {
+  cursor: pointer;
 }
 
 .get-full-access-section {
@@ -42,6 +46,10 @@
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+}
+
+.logo-component img {
+  max-width: 600px;
 }
 
 .article-about-title {
