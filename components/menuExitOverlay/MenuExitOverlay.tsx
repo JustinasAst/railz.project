@@ -10,10 +10,7 @@ const MenuExitOverlay: React.FC<ComponentProps> = ({ children }) => {
   const { setMenuTurnedOff, menuTurnedOff } = useContext(AuthContext);
 
   return (
-    <div
-      className={menuTurnedOff ? '' : 'exit'}
-      onClick={() => setMenuTurnedOff(!menuTurnedOff)}
-    >
+    <div className="exit" onClick={() => setMenuTurnedOff(true)}>
       {children}
     </div>
   );

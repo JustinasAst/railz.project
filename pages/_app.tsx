@@ -17,9 +17,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <AuthProvider>
         <Header />
-        {/* <MenuExitOverlay> */}
-        <Component {...pageProps} />
-        {/* </MenuExitOverlay> */}
+        <MenuExitOverlay>
+          <Component {...pageProps} />
+        </MenuExitOverlay>
       </AuthProvider>
     </>
   );
