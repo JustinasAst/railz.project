@@ -8,10 +8,10 @@ import { useContext } from 'react';
 import { AuthContext } from '../../context';
 
 const Header: React.FC = () => {
-  const [product, setProduct] = useState<boolean>(false);
-  const [useCase, setUseCase] = useState<boolean>(false);
-  const [developers, setDevelopers] = useState<boolean>(false);
-  const [company, setCompany] = useState<boolean>(false);
+  const [productLink, setProductLink] = useState<boolean>(false);
+  const [useCaseLink, setUseCaseLink] = useState<boolean>(false);
+  const [developersLink, setDevelopersLink] = useState<boolean>(false);
+  const [companyLink, setCompanyLink] = useState<boolean>(false);
   const { menuTurnedOff, setMenuTurnedOff } = useContext(AuthContext);
 
   return (
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
           <ul className="navigation-list">
             <li
               className="navigation-list-element"
-              onClick={() => setProduct(!product)}
+              onClick={() => setProductLink(!productLink)}
             >
               <div className="title-and-icon">
                 Product
@@ -57,7 +57,7 @@ const Header: React.FC = () => {
               <div className="hide-navigation-data">
                 <Product />
               </div>
-              {product ? (
+              {productLink ? (
                 <div className="hidemobile">
                   <Product />
                 </div>
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
 
             <li
               className="navigation-list-element"
-              onClick={() => setUseCase(!useCase)}
+              onClick={() => setUseCaseLink(!useCaseLink)}
             >
               <div className="title-and-icon">
                 Use case
@@ -76,7 +76,7 @@ const Header: React.FC = () => {
               <div className="hide-navigation-data">
                 <Product />
               </div>
-              {useCase ? (
+              {useCaseLink ? (
                 <div className="hidemobile">
                   <Product />
                 </div>
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
 
             <li
               className="navigation-list-element"
-              onClick={() => setDevelopers(!developers)}
+              onClick={() => setDevelopersLink(!developersLink)}
             >
               <div className="title-and-icon">
                 Developers
@@ -95,7 +95,7 @@ const Header: React.FC = () => {
               <div className="hide-navigation-data">
                 <Product />
               </div>
-              {developers ? (
+              {developersLink ? (
                 <div className="hidemobile">
                   <Product />
                 </div>
@@ -108,7 +108,7 @@ const Header: React.FC = () => {
 
             <li
               className="navigation-list-element"
-              onClick={() => setCompany(!company)}
+              onClick={() => setCompanyLink(!companyLink)}
             >
               <div className="title-and-icon">
                 Developers
@@ -118,7 +118,7 @@ const Header: React.FC = () => {
               <div className="hide-navigation-data">
                 <Product />
               </div>
-              {company ? (
+              {companyLink ? (
                 <div className="hidemobile">
                   <Product />
                 </div>

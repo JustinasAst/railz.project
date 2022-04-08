@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: rgb(253, 253, 253);
+  z-index: 3;
 
   img {
     width: 150px;
@@ -22,6 +23,8 @@
   list-style-type: none;
   margin-top: 0px;
   margin-bottom: 0px;
+  right: 0;
+  left: 0;
 
   li {
     padding: 40px 20px;
@@ -41,8 +44,9 @@
   left: 0;
   right: 0;
   position: absolute;
-  transition: 500ms;
-  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 300ms linear;
 }
 
 .navigation-list {
@@ -52,7 +56,14 @@
     }
 
     .hide-navigation-data {
-      margin-top: 1030px;
+      display: block;
+      top: 0;
+      margin-top: 100px;
+      visibility: visible;
+      opacity: 1;
+      @media (max-width: 1260px) {
+        display: none;
+      }
     }
   }
 }

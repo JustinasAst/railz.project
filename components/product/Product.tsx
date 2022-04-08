@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import NavigationLinkData from '../navigationLinkData/NavigationLinkData';
 import { FiArrowRight } from 'react-icons/fi';
 import { useContext } from 'react';
 import { AuthContext } from '../../context';
