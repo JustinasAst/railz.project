@@ -1,1 +1,6 @@
-/* No CSS *//*# sourceMappingURL=ExitBackground.css.map */
+@media (max-width: 1260px) {
+  .exit {
+    background-color: rgba(18, 138, 18, 0.034);
+  }
+}
+/*# sourceMappingURL=ExitBackground.css.map */
